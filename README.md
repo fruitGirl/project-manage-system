@@ -89,7 +89,7 @@ $ npm run build:pro （构建生产环境）
 
 ### 维护者
 
-danding (danding@huored.com)
+moran
 
 想了解更多请查看 [Nuxt.js docs](https://nuxtjs.org).
 
