@@ -1,0 +1,279 @@
+html,
+body {
+  height: 100%;
+  line-height: 1.5;
+  box-sizing: border-box;
+  font-size: 14px;
+  color: #333;
+}
+
+body {
+  overflow: auto;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC',
+    'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial,
+    sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+}
+
+#__nuxt,
+#__layout {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+a {
+  color: #409eff;
+  cursor: pointer;
+
+  &:hover {
+    color: #66b1ff;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* 常规页面布局 */
+.page-container {
+  padding: 15px;
+  margin: 15px;
+  background: #fff;
+  border-radius: 3px;
+}
+
+.page-content-container {
+  &:extend(.page-container);
+}
+
+/* 灰色背景容器 */
+.page-gray-container {
+  margin: 15px;
+  background: #f0f2f5;
+  border-radius: 3px;
+}
+
+/* 透明背景页面布局 */
+.page-transparent-container {
+  padding: 15px;
+  background: transparent;
+}
+
+/* 详情页的包裹容器 */
+.detail-transparent-container {
+  padding: 0 15px 15px;
+  background: transparent;
+}
+
+.pm-modules-container {
+  display: flex;
+}
+
+.pm-left-modules {
+  flex: 1;
+  margin-right: 15px;
+}
+
+.pm-right-modules {
+  width: 420px;
+}
+
+/* 预留底部操作边距 */
+.operate-reserve-wrapper {
+  margin-bottom: 85px;
+}
+
+/* 模块容器 */
+.pm-module-container {
+  padding: 15px 15px 20px;
+  margin-bottom: 15px;
+  background: #fff;
+  border-radius: 3px;
+  .title {
+    font-size: 14px;
+    font-weight: bold;
+  }
+  .content {
+    padding: 0 13px;
+  }
+}
+
+/* 小模块布局 */
+.pm-module-white {
+  background-color: #fff;
+  padding: 15px;
+}
+
+/* 居中 */
+.pm-center {
+  text-align: center;
+}
+
+.pm-text-right {
+  text-align: right;
+}
+
+/* 浮动 */
+.pm-clearfix {
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+.pm-left {
+  float: left;
+}
+
+.pm-right {
+  float: right;
+}
+
+/* 省略号 */
+.pm-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* flex style */
+.pm-flex {
+  display: flex;
+}
+
+.pm-flex-between {
+  justify-content: space-between;
+}
+
+.pm-flex-justify-center {
+  justify-content: center;
+}
+
+.pm-flex-center {
+  align-items: center;
+}
+
+.pm-flex-1 {
+  flex: 1;
+}
+
+.pm-flex-auto {
+  flex: 0;
+}
+
+/* 背景 */
+.pm-bg-white {
+  background-color: #fff;
+}
+
+/* 状态select样式更改 */
+.pm-select-style {
+  .el-input--small .el-input__inner {
+    width: 100px;
+    color: #000;
+    border: none;
+  }
+  .el-icon-arrow-up:before {
+    content: '\e790';
+  }
+  .el-input .el-select__caret {
+    transform: rotateZ(0deg) !important;
+  }
+}
+
+/* button 样式 */
+.btn-white {
+  background-color: #fff;
+  padding: 8px 12px;
+  border-radius: 3px;
+  height: 30px;
+}
+
+/* tabs */
+.pm-tabs {
+  .el-tabs__nav-wrap::after {
+    display: none;
+  }
+}
+
+/* 更多筛选位置 */
+.pm-more-filter {
+  float: right;
+  margin: 5px 0 0 10px;
+  font-size: 14px;
+}
+
+.detail-bac {
+  background-color: #fff;
+  padding: 15px;
+}
+
+/*富文本编辑器不要框*/
+.pm-detail-editor {
+  .ql-toolbar.ql-snow {
+    display: none;
+  }
+  .ql-container.ql-snow {
+    border: none;
+  }
+  .eidtor-detail {
+    max-height: 800px !important ;
+  }
+}
+.quill-editor {
+  .ql-toolbar {
+    border-radius: 4px 4px 0px 0px;
+    border-color: #dcdfe6;
+  }
+  .ql-container {
+    border-radius: 0px 0px 4px 4px;
+    border-color: #dcdfe6;
+  }
+}
+
+/* 滚动条样式 */
+.pm-scrollbar {
+  overflow-y: auto;
+  &::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  &::-webkit-scrollbar-thumb {
+    height: 50px;
+    border-radius: 10px;
+    background: rgba(144, 147, 153, 0.3);
+  }
+  &::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: #f5f5f5;
+  }
+}
+
+/* 暂无数据 */
+.no-data {
+  text-align: center;
+  padding: 10px 0;
+  color: #a4a4a4;
+  font-size: 14px;
+}
+
+// 时间选择框悬着时间框更改
+.pm-date-picker .el-time-panel {
+  margin: 5px -21px;
+}
+
+// tag按钮颜色
+.pm-tag{
+  padding: 1px 8px;
+  border-radius: 3px;
+  color: #fff;
+}
+.pm-tag-yellow {
+  .pm-tag();
+  background-color: #FFAE00;
+}
+.pm-tag-blue {
+  .pm-tag();
+  background-color: #82C6FF;
+}
